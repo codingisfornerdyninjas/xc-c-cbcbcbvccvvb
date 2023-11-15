@@ -13,7 +13,7 @@ const app = express();
 app.use(express.static(publicPath));
 // Load vendor files last.
 // The vendor's uv.config.js won't conflict with our uv.config.js inside the publicPath directory.
-app.use("/prx/", express.static(uvPath));
+app.use("/uv/", express.static(uvPath));
 
 // Error for everything else
 app.use((req, res) => {
